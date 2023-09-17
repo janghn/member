@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+# Database 연동 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/memberdb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: hnjang
+    password: Abcd123@
+  thymeleaf:
+    cache: false
+
+  # JPA 설정
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
